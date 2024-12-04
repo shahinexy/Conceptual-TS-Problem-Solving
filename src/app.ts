@@ -17,3 +17,10 @@ const findLargestNumber = (arry: number[]) =>{
 console.log(findLargestNumber([23,53,75,12,54,67]));
 
 
+// 03. Create a TypeScript function filterEvenNumbers that takes an array of numbers and returns a new array containing only the even numbers from the original array.
+
+const filterEvenNumbers = (array: number[]): number[] =>{
+    return array.filter((num) => num % 2 === 0)
+}
+
+console.log(filterEvenNumbers([3,4,8,7,9,2]));
