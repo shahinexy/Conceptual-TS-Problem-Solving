@@ -7,3 +7,13 @@ const repeatString = (str: string, num: number) =>{
 }
 
 console.log(repeatString('Hello!', 5));
+
+// 02. Design a TypeScript function findLargestNumber that takes an array of numbers and returns the largest number in the array.
+
+const findLargestNumber = (arry: number[]) =>{
+    return Math.max(...arry)
+}
+
+console.log(findLargestNumber([23,53,75,12,54,67]));
+
+
