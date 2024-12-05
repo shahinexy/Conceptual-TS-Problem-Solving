@@ -24,3 +24,11 @@ const filterEvenNumbers = (array: number[]): number[] =>{
 }
 
 console.log(filterEvenNumbers([3,4,8,7,9,2]));
+
+// 04. Design a TypeScript function reverseArray that takes an array of any type and returns a new array with its elements reversed. Use generics to define types.
+
+const reverseArray = (arr: any[]): any[] =>{
+    return arr.reverse();
+} 
+
+console.log(reverseArray([1,2,3,4,5]));
