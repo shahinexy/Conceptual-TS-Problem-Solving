@@ -86,3 +86,15 @@ const isRecentBook = (book: Book): boolean =>{
 
 console.log("Current Year - 5:",currentYear-5);
 console.log(isRecentBook(book1));
+
+// 07. Create a TypeScript function logString that takes a parameter of type unknown and uses a type guard to check whether the parameter is of type string. If it is, log the string to the console. If it is not, log an error message.
+
+const logString = (params: unknown): void =>{
+    if(typeof params === "string"){
+        console.log(params);
+    }
+    else console.log("Input is not a string.");
+}
+
+logString('Shahin');
+logString(234);
