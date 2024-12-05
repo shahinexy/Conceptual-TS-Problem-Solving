@@ -49,5 +49,40 @@ const student1 : student = {
     grades : [95,96,90,98,99,93]
 }
 
-const averageGradeForBob = student1.grades.reduce((num, prev) => num + prev, 0)
+const calculateAverageGrade = (datas:student): number =>{
+    return datas.grades.reduce((num, prev) => num + prev, 0)
+}
+
+const averageGradeForBob = calculateAverageGrade(student1);
+
 console.log(averageGradeForBob);
+
+
+// 06. You are given an object representing a book with properties title (string), author (string), and publishedYear (number). Use type alias for declaring the object. Write a TypeScript function called isRecentBook that takes this book object as input and determines if the book was published in the last 5 years.
+
+// Hints: Use getFullYear() method to extract the year to check the given year with current year.
+
+type Book = {
+    title : string,
+    author: string,
+    publishedYear: number
+}
+
+const book1: Book = {
+    title: "Sample Book",
+    author: "John Doe",
+    publishedYear: 2018
+}
+
+const date = new Date()
+const currentYear = date.getFullYear();
+
+const isRecentBook = (book: Book): boolean =>{
+    if(currentYear - 5 <= book.publishedYear){
+        return true;
+    }
+    else return false;
+}
+
+console.log("Current Year - 5:",currentYear-5);
+console.log(isRecentBook(book1));
